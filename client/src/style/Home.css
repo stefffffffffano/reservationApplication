@@ -1,0 +1,150 @@
+/* Reset globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Evita l'overflow orizzontale */
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0a2540; 
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Layout generale */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh; /* Assicura che il contenuto sia centrato */
+    padding: 20px;
+}
+
+/* Struttura della card */
+.info-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid #d1d5db;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 90%;
+}
+
+/* Stile immagine */
+.image-container {
+    flex-shrink: 0;
+    padding: 20px;
+    border-right: 3px solid #d1d5db;
+}
+
+.doctor-image {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    object-position: top; 
+    border-radius: 10px;
+}
+
+/* Testo */
+.text-container {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.text-large {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.doctor-info {
+    margin-top: 16px;
+    color: #555;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icone */
+.icon {
+    font-size: 24px;
+}
+
+/* Link */
+.doctor-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.doctor-link:hover {
+    text-decoration: underline;
+}
+
+/* Bottone */
+.availability-button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    font-size: 20px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    gap: 10px;
+}
+
+.availability-button:hover {
+    background-color: #c7e1fc;
+}
+
+/* RESPONSIVITÀ */
+/* Schermi medi e piccoli: immagine sopra, testo sotto */
+@media (max-width: 768px) {
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .image-container {
+        border-right: none;
+        border-bottom: 3px solid #d1d5db;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    .doctor-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .text-container {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}

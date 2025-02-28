@@ -1,0 +1,44 @@
+/* Reset globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Evita l'overflow orizzontale */
+body {
+    overflow-x: hidden;
+}
+
+/* Stile della navbar */
+.navbar {
+    background-color: #0a2540; /* Blu scuro */
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Stile per il titolo della navbar */
+.nav-left {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Stile per i link a destra */
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
