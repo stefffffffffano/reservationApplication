@@ -5,6 +5,7 @@
     min-height: 100vh;
     background: linear-gradient(135deg, #c7e1fc, #fdfcfc);
     padding: 20px;
+    padding-top: 120px;
 }
 
 .confirmation-card {

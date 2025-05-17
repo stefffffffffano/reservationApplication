@@ -19,7 +19,8 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  min-height: calc(100vh - 80px); /* Compensa altezza navbar */
+  padding-top: 120px;
+  min-height: calc(100vh - 80px); 
 }
 
 /* CARD */
