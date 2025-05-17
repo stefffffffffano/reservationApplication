@@ -1,0 +1,36 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+  text-align: center;
+  background: #f0f4f8;
+}
+
+.notfound-container h1 {
+  font-size: 48px;
+  color: #0a2540;
+  margin-bottom: 16px;
+}
+
+.notfound-container p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.back-home-button {
+  text-decoration: none;
+  font-size: 18px;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.back-home-button:hover {
+  background-color: #1d4ed8;
+}

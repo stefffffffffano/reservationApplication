@@ -1,44 +1,136 @@
-/* Reset globale */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Evita l'overflow orizzontale */
-body {
-    overflow-x: hidden;
-}
-
-/* Stile della navbar */
+/* --- NAVBAR BASE --- */
 .navbar {
-    background-color: #0a2540; /* Blu scuro */
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+  background-color: #0a2540;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width:100%;
+  top:0;
+  left:0;
+  z-index: 10000000;
 }
 
-/* Stile per il titolo della navbar */
-.nav-left {
-    font-size: 24px;
-    font-weight: bold;
+/* DECORAZIONE SOTTO LA NAVBAR */
+.nav-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(to right, #c7d2fe, #60a5fa, #3b82f6);
 }
 
-/* Stile per i link a destra */
-.nav-right {
-    display: flex;
-    gap: 30px;
+/* --- LINK NAVBAR DESKTOP --- */
+.nav-links-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
 .nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 22px;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  margin-top: 4px;
 }
 
 .nav-link:hover {
-    text-decoration: underline;
+  opacity: 0.85;
+}
+
+/* --- HAMBURGER ICON --- */
+.hamburger-icon {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* --- OVERLAY DI SFONDO QUANDO IL MENU È APERTO --- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 19;
+}
+
+/* --- SIDE MENU DA SINISTRA --- */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 80%;
+  max-width: 300px;
+  background-color: #0a2540;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 30px;
+  gap: 30px;
+  z-index: 20;
+  transition: left 0.3s ease-in-out;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+/* --- PULSANTE CHIUSURA --- */
+.close-button {
+  background: none;
+  color: white;
+  font-size: 28px;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+/* --- LINK NEL MENU LATERALE --- */
+.side-link {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  width: fit-content;
+}
+
+.side-link.active::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.side-link:hover {
+  opacity: 0.8;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .nav-links-left {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+  }
 }

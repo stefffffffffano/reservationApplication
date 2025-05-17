@@ -1,150 +1,135 @@
-/* Reset globale */
+/* RESET GLOBALE */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Evita l'overflow orizzontale */
+/* BODY A SCHERMO PIENO */
 body {
-    overflow-x: hidden;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #c7e1fc;
+  font-family: system-ui, sans-serif;
 }
 
-/* Navbar */
-.navbar {
-    background-color: #0a2540; 
-    color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+/* CONTAINER PRINCIPALE */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: calc(100vh - 80px); /* Compensa altezza navbar */
 }
 
-/* Layout generale */
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 85vh; /* Assicura che il contenuto sia centrato */
-    padding: 20px;
+/* CARD */
+.home-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 1100px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #d1d5db;
+  gap: 40px;
 }
 
-/* Struttura della card */
-.info-card {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: white;
-    padding: 40px;
-    border-radius: 12px;
-    border: 2px solid #d1d5db;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    width: 90%;
+/* IMMAGINE DOTTORESSA */
+.home-image-wrapper {
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Stile immagine */
-.image-container {
-    flex-shrink: 0;
-    padding: 20px;
-    border-right: 3px solid #d1d5db;
+.home-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
 }
 
-.doctor-image {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    object-position: top; 
-    border-radius: 10px;
+/* INFO TESTO */
+.home-info {
+  flex: 1;
 }
 
-/* Testo */
-.text-container {
-    flex: 1;
-    padding-left: 40px;
+.home-title {
+  font-size: 34px;
+  font-weight: bold;
+  color: #0a2540;
+  margin-bottom: 20px;
 }
 
-.text-large {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333;
+.home-detail {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 12px;
 }
 
-.doctor-info {
-    margin-top: 16px;
-    color: #555;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.home-link {
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Icone */
-.icon {
-    font-size: 24px;
+.home-link:hover {
+  text-decoration: underline;
 }
 
-/* Link */
-.doctor-link {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 24px;
+/* BOTTONE COME <a> */
+.home-button {
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  background-color: #2563eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-.doctor-link:hover {
-    text-decoration: underline;
+.home-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Bottone */
-.availability-button {
-    margin-top: 15px;
-    padding: 12px 20px;
-    font-size: 20px;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    box-shadow: none;
-    gap: 10px;
-}
-
-.availability-button:hover {
-    background-color: #c7e1fc;
-}
-
-/* RESPONSIVITÀ */
-/* Schermi medi e piccoli: immagine sopra, testo sotto */
+/* RESPONSIVITÀ MOBILE */
 @media (max-width: 768px) {
-    .info-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
+  .home-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
 
-    .image-container {
-        border-right: none;
-        border-bottom: 3px solid #d1d5db;
-        padding-bottom: 20px;
-        width: 100%;
-    }
+  .home-image-wrapper {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
 
-    .doctor-image {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
+  .home-title {
+    font-size: 28px;
+  }
 
-    .text-container {
-        padding-left: 0;
-        padding-top: 20px;
-    }
+  .home-detail {
+    font-size: 18px;
+  }
 
-    .button-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
+  .home-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
 }
