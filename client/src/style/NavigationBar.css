@@ -6,7 +6,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10000000;
+  position: relative;
+  z-index: 10;
 }
 
 /* DECORAZIONE SOTTO LA NAVBAR */
