@@ -31,7 +31,7 @@ const HomePage = () => {
           <p className="home-detail">📍 {doctorInfo.location}</p>
 
           <a
-            /*href="https://tidycal.com/s323195/prenota-la-tua-visita-ginecologica"*/
+            href="https://tidycal.com/elisabettafumero/orari-visite"
             className="home-button">
             📅 Prenota ora
           </a>
