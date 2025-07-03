@@ -6,7 +6,7 @@ const HomePage = () => {
   const navigate = useNavigate();
 
   const doctorInfo = {
-    name: "Dott.ssa Elisabetta Fumero",
+    name: "Dott.ssa Elisabetta Fumero, specialista in ostetricia e ginecologia",
     email: "elisabetta.fumero@gmail.com",
     phone: "+39 3273765908",
     location: "Via Torino 31, Nole, Torino",
