@@ -32,7 +32,7 @@ const AboutPage = () => {
           <section className="about-section">
             <h2>🏥 Esperienza Clinica</h2>
             <p>
-              Oltre 10 anni di attività in ambito ospedaliero e ambulatoriale, con particolare attenzione alla prevenzione e al benessere globale della donna.
+              Quasi 10 anni di attività in ambito ospedaliero e ambulatoriale, con particolare attenzione alla prevenzione e al benessere globale della donna.
             </p>
           </section>
 
